@@ -37,7 +37,7 @@ job "hello-world" {
       driver = "raw_exec"
 
       artifact {
-        source      = "https://raw.githubusercontent.com/William-Hashicorp/sampleapp/main/hello-world.ps1"
+        source      = "https://raw.githubusercontent.com/William-Hashicorp/nomad-enterprise-demo/refs/heads/main/shared/jobs/hello-world.ps1"
         destination = "${NOMAD_TASK_DIR}"
       }
 
