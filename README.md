@@ -1,18 +1,16 @@
-To be updated
+This is a demo env for Nomad Enterprise.
 
-Deployment:
+0. Prepare the infrastracture
+1. Demo: Deploy a Multi Region job on Windows clients
+2. Demo: Enable Auditing on Nomad
+3. Demo: Enable Namespace and Resource Quota
+4. Demo: Enable ACL policies and user token
+5. Demo: Enable Sentinel policies
+6. Demo: How to apply job restrictions by ACL and Sentinel policies 
+7. Demo: How to apply job restrictions by Resource Quota
+8. Demo: Manage Redis database as a Windows service on Windows clients
+9. Demo: Nomad-pack tool
 
-Step 1: Prepare image with Packer 
-=======================================
-    1. Update the "variables.hcl", change the region variable with your preferred AWS region. In this example, the region is us-east-2
 
 
-    2. Build AMI image with packer
-
-packer init image.pkr.hcl
-packer build -var-file=variables.hcl image.pkr.hcl
-
-You can get the image id of the new image from output.
-
-    3. Update the terraform.tfvars with the ami ID.
-
+Detail deployment and demo steps can be found in the internal google document.
