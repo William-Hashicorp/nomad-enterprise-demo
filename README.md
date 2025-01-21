@@ -10,7 +10,7 @@ This is a demo env for Nomad Enterprise.
 7. Demo: How to apply job restrictions by Resource Quota
 8. Demo: Manage Redis database as a Windows service on Windows clients
 9. Demo: Nomad-pack tool
-
+10. Demo: Nomad batch job to update local file and the task's env
 
 
 Detail deployment and demo steps can be found in the internal google document.
