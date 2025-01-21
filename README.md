@@ -11,6 +11,6 @@ This is a demo env for Nomad Enterprise.
 8. Demo: Manage Redis database as a Windows service on Windows clients
 9. Demo: Nomad-pack tool
 10. Demo: Nomad batch job to update local file and the task's env
-
+11. Demo: Nomad Scheduling features (binpack, spread, nood_pool, preemption, mem oversubscription )
 
 Detail deployment and demo steps can be found in the internal google document.
