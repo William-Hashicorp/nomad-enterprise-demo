@@ -1,7 +1,14 @@
 job "batch-job-test" {
   datacenters = ["dc1"] # The datacenter where this job will run
   type        = "service" # Define the job as a service to run continuously
+# to ignore the node pool settings  
+  node_pool = "all"
 
+  constraint {
+    attribute = "${attr.kernel.name}"
+    value = "linux"
+  }
+  
   group "example-group" {
     task "write-config-file" {
       driver = "raw_exec" # Use the raw_exec driver to run commands directly on the host system

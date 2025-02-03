@@ -1,4 +1,7 @@
 group "sidecar" {
+  # to ignore the node pool settings  
+  node_pool = "all"
+  
   # set the reschedule stanza so that we don't have to wait too long
   # for the deployment to be marked failed
   reschedule {

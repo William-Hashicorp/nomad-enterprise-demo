@@ -30,7 +30,9 @@ job "example" {
     stagger           = "30s"
   }
 
-
+# to ignore the node pool settings  
+  node_pool = "all"
+  
   group "cache" {
 
     count = 0

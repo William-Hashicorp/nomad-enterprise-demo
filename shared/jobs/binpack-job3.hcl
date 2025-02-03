@@ -1,4 +1,7 @@
 job "example-binpack3" {
+  # to ignore the node pool settings  
+  node_pool = "all"
+  
   #datacenters = ["dc1"]
   type = "service"
 

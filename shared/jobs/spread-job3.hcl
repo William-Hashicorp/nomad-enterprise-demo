@@ -11,6 +11,8 @@ job "example-spread3" {
     }
   }
   type = "service"
+  # to ignore the node pool settings  
+  node_pool = "all"
 
   group "example-group" {
     count = 1

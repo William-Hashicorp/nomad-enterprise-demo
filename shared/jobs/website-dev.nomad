@@ -3,6 +3,8 @@ job "website" {
   type        = "service"
   priority    = 40
   namespace = "dev"
+  # to ignore the node pool settings  
+  node_pool = "all"
 
   constraint {
     attribute = "${attr.kernel.name}"

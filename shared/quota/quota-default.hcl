@@ -4,7 +4,7 @@ description = "default quota"
 limit {
     region = "region1"
     region_limit {
-        cpu = 2000
-        memory = 3100
+        cpu = 10000
+        memory = 3300
     }
 }

@@ -1,6 +1,8 @@
 job "redis-demo-service" {
   datacenters = ["dc1"]
   region      = "region1"
+  # to ignore the node pool settings  
+  node_pool = "all"
 
   # Constraint to ensure it runs only on Windows servers
   constraint {

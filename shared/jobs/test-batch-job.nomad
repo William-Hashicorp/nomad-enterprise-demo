@@ -1,7 +1,9 @@
 job "batch-job-test" {
   datacenters = ["dc1"]
   type        = "batch"
-
+# to ignore the node pool settings  
+  node_pool = "all"
+  
   group "example-group" {
     task "write-config-file" {
       driver = "exec"  # Use the exec driver to execute commands directly on the Nomad client

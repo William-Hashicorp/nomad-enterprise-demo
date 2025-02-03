@@ -4,6 +4,8 @@ job "hello-world" {
 
   type        = "service"
   namespace   = "default"
+  # to ignore the node pool settings  
+  node_pool = "all"
 
   group "app-group" {
     count = 1

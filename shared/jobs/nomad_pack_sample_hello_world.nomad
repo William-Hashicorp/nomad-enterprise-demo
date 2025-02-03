@@ -7,6 +7,9 @@ job "hello_world" {
   # Define the job type as "service" (used for long-running services)
   type = "service"
 
+# to ignore the node pool settings  
+  node_pool = "all"
+  
   # Define a task group named "app"
   group "app" {
 

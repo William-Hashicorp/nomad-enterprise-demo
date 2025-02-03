@@ -3,6 +3,8 @@ job "webserver-test" {
   type        = "service"
   priority    = 40
   namespace = "qa"
+  # to ignore the node pool settings  
+  node_pool = "all"
 
   constraint {
     attribute = "${attr.kernel.name}"
