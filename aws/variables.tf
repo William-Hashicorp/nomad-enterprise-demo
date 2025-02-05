@@ -59,12 +59,12 @@ variable "nomad_binary" {
 }
 
 variable "nomad_datacenter_name" {
-  description = "The nomad datacenter to join."
+  description = "The nomad datacenter for Nomad server and client nodes to join."
   default     = "dc1"
 }
 
 variable "nomad_region_name" {
-  description = "The nomad region to join."
+  description = "The nomad region for Nomad server and client nodes to join."
   default     = "region1"
 }
 
