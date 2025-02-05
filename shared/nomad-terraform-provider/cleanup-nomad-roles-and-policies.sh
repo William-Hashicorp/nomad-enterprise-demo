@@ -1,6 +1,6 @@
 #!/bin/bash -l
 
-# This script will cleanup all nomad roles and policies 
+# This script will cleanup specific Nomad roles and policies
 set -euvo pipefail
 
 echo "\
@@ -8,19 +8,19 @@ echo "\
   START Clean Roles and Policies Script
   ######################################################################"
 
-# Remove the roles
-echo "Removing roles"
-nomad acl role list -json | jq -r '.[].ID' | while read -r role_id; do
+# Remove the specified roles
+echo "Removing specific roles: dev, operator, admin"
+nomad acl role list -json | jq -r '.[] | select(.Name == "dev" or .Name == "operator" or .Name == "admin") | .ID' | while read -r role_id; do
   nomad acl role delete "$role_id"
 done
-echo "Roles removed"
+echo "Specified roles removed"
 
-# Remove the policies
-echo "Removing policies"
-nomad acl policy list -json | jq -r '.[].Name' | while read -r policy_name; do
+# Remove the specified policies
+echo "Removing specific policies: admin, operator, dev-submit, dev-read"
+nomad acl policy list -json | jq -r '.[] | select(.Name == "admin" or .Name == "operator" or .Name == "dev-submit" or .Name == "dev-read") | .Name' | while read -r policy_name; do
   nomad acl policy delete "$policy_name"
 done
-echo "Policies removed"
+echo "Specified policies removed"
 
 echo "\
   ######################################################################
