@@ -178,8 +178,8 @@ resource "aws_instance" "server" {
     server_count              = var.server_count
     region                    = var.region
     cloud_env                 = "aws"
-    datacenter                = "dc1"
-    region_name               = "region1"
+    datacenter                = var.nomad_datacenter_name 
+    region_name               = var.nomad_region_name 
     retry_join                = var.retry_join
     nomad_binary              = var.nomad_binary
     nomad_consul_token_id     = random_uuid.nomad_id.result
@@ -231,8 +231,8 @@ resource "aws_instance" "client" {
   user_data = templatefile("${path.module}/../shared/data-scripts/user-data-client.sh", {
     region                    = var.region
     cloud_env                 = "aws"
-    datacenter                = "dc1"
-    region_name               = "region1"
+    datacenter                = var.nomad_datacenter_name 
+    region_name               = var.nomad_region_name 
     retry_join                = var.retry_join
     nomad_binary              = var.nomad_binary
     nomad_consul_token_id     = random_uuid.nomad_id.result

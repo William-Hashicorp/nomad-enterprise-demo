@@ -51,3 +51,14 @@ variable "nomad_binary" {
   description = "URL of a zip file containing a nomad executable to replace the Nomad binaries in the AMI with. Example: https://releases.hashicorp.com/nomad/0.10.0/nomad_0.10.0_linux_amd64.zip"
   default     = "https://releases.hashicorp.com/nomad/1.9.4+ent/nomad_1.9.4+ent_linux_amd64.zip"
 }
+
+variable "nomad_datacenter_name" {
+  description = "The nomad datacenter to join."
+  default     = "dc1"
+}
+
+variable "nomad_region_name" {
+  description = "The nomad region to join."
+  default     = "region1"
+}
+
