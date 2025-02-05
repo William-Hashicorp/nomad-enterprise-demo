@@ -161,7 +161,7 @@ resource "aws_instance" "server" {
       "Name" = "${var.name_prefix}-server-${count.index}"
     },
     {
-      "ConsulAutoJoin" = "auto-join"
+      "ConsulAutoJoin" = var.ConsulAutoJoin_value
     },
     {
       "NomadType" = "server"
@@ -208,7 +208,7 @@ resource "aws_instance" "client" {
       "Name" = "${var.name_prefix}-client-${count.index}"
     },
     {
-      "ConsulAutoJoin" = "auto-join"
+      "ConsulAutoJoin" = var.ConsulAutoJoin_value
     },
     {
       "NomadType" = "client"

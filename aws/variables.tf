@@ -17,6 +17,12 @@ variable "retry_join" {
   default     = "provider=aws tag_key=ConsulAutoJoin tag_value=auto-join"
 }
 
+variable "ConsulAutoJoin_value" {
+  description = "Used by Consul to automatically form a cluster."
+  type        = string
+  default     = "auto-join"
+}
+
 variable "allowlist_ip" {
   description = "IP to allow access for the security groups (set 0.0.0.0/0 for world)"
   default     = "0.0.0.0/0"
