@@ -1,6 +1,6 @@
-This is a demo env for Nomad Enterprise.
+This is a level-100 to Level-200 demo cases for Nomad Enterprise.
 
-0. Prepare the infrastracture
+0. (Optional) Prepare the infrastracture
 1. Demo: Deploy a Multi Region job on Windows clients
 2. Demo: Enable Auditing on Nomad
 3. Demo: Enable Namespace and Resource Quota
@@ -13,5 +13,6 @@ This is a demo env for Nomad Enterprise.
 10. Demo: Nomad Template and batch job to update local file and the task's env
 11. Demo: Nomad Scheduling features (binpack, spread, nood_pool, preemption, mem oversubscription )
 12. Demo: How to update applications managed by Nomad
+13. Demo: Application Dependency for Nomad job deployment
 
 Detail deployment and demo steps can be found in the internal google document.
